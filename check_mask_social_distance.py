@@ -18,6 +18,11 @@ faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 #input video stream
 input_video = "./videos/test/test_01.mp4"
 
+#create output dir if not exists for storing recorded videos
+output_dir = "./videos/output"
+if not os.path.isdir(output_dir):
+      os.makedirs(output_dir)
+
 # initialize the video stream and allow the camera sensor to warm up
 print("[INFO] starting video stream...")
 vs = FileVideoStream(input_video).start() #streaming video from local storage
@@ -135,7 +140,7 @@ while True:
 	if writer is None:
 		# initialize our video writer
 		fourcc = cv2.VideoWriter_fourcc(*"XVID")
-		writer = cv2.VideoWriter(f"videos/output/output_{datetime.now().strftime('%Y%m%d%H%M%S')}.avi", fourcc, 25,
+		writer = cv2.VideoWriter(f"{output_dir}/output_{datetime.now().strftime('%Y%m%d%H%M%S')}.avi", fourcc, 25,
 			(frame.shape[1], frame.shape[0]), True)
 
 	# if the video writer is not None, write the frame to the output
