@@ -1,8 +1,7 @@
 # MaskAndSocialDistanceDetection
 As the COVID-19 cases are on rise and several preventive steps are being taken up by respective authorities to curb the number of cases.Wearing mask and maintaining social distancing in public places are on top of the pile of prevention measures list.In this prototype I just wanted to demonstrate how can we detect if a person is wearing a mask or not and people are keeping safe distance from others in public places.
 
-## Demo: 
-https://youtu.be/_8uE5BBSODU
+## Demo: https://youtu.be/_8uE5BBSODU
 
 ## step-1
 install the required libraries from "requirements.txt".
